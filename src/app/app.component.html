@@ -6,7 +6,7 @@
     >
       <a class="page-link disable-text-selection" (click)="currentPage = currentPage - 1">Prev</a>
     </li>
-    <ng-container *ngFor="let image of images; let i =index;">
+    <ng-container *appTimes="images.length; let i = index">
       <li
         class="page-item"
         [appClass]="{ active: i === currentPage }"
@@ -29,9 +29,9 @@
   <img [src]="images[currentPage].url" alt="{{images[currentPage].title}}">
 </div>
 
-<ul *appTimes="7">
-  <li>Hi, there!</li>
-</ul>
+<!--<ul *appTimes="7">-->
+<!--  <li>Hi, there!</li>-->
+<!--</ul>-->
 
 <!--<div [ngSwitch]="currentPage">-->
 <!--  <div *ngSwitchCase="0">-->
